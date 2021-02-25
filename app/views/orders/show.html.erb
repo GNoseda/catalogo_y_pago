@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @order.number %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @order.total %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @order.state %>
+</p>
+
+<% if @order.state == "Completed" %>
+  <p>
+    <strong>Payment Method:</strong>
+    <%= @payment.get_payment_method %>
+  </p>
+<% end %>
+
+<p>
+  <strong>User:</strong>
+  <%= @order.user_name %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

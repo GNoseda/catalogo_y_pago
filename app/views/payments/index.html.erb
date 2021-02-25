@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Choose a Payment Method</h1>
+
+<% @payment_methods.each do |pm|%>
+  <p><%= link_to pm.name, new_order_payment_path(@order, payment_method_id:pm) %></p>
+<% end %>
+
+
+<br>
+

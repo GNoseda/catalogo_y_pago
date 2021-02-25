@@ -1,0 +1,8 @@
+<h1>Paying order <%= @order.number %> </h1>
+<p>Total: <%= "$#{@order.total}" %></p>
+<p>Payment Method: <%= @payment_method.name %></p>
+<p>Payment Method: <%= @payment_method.id %></p>
+
+<%= render 'form', payment: @payment %>
+
+<%= link_to 'Back', orders_path %>
